@@ -1,0 +1,391 @@
+
+
+:root {
+  --primary-color: #E8F2EB;
+  --secondary-color: #E8F2EB;
+  --accent-color: #17402A;
+  --surface-color: #FFFFFF;
+  --text-color: #17402A;
+  --muted-color: #17402A;
+  --border-color: #17402A;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: var(--primary-color);
+  color: var(--text-color);
+}
+
+#root {
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Welcome page */
+.welcome-page {
+  min-height: 100vh;
+  background: var(--primary-color);
+}
+
+.welcome-card {
+  max-width: 700px;
+  margin: 80px auto;
+  padding: 55px 30px;
+  background: var(--secondary-color);
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(23, 64, 42, 0.08);
+}
+
+.welcome-card h1 {
+  color: var(--accent-color);
+  font-size: 36px;
+  margin-bottom: 15px;
+}
+
+.welcome-card p {
+  color: var(--muted-color);
+  line-height: 1.6;
+}
+
+.tagline {
+  font-size: 15px;
+  margin-top: 10px;
+}
+
+/* Navigation bar */
+.navbar {
+  background: var(--secondary-color);
+  color: var(--text-color);
+  padding: 20px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--text-color);
+  font-size: 24px;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.nav-links a {
+  color: var(--text-color);
+  font-size: 14px;
+}
+
+.nav-links a:hover {
+  color: var(--accent-color);
+}
+
+.nav-links a.active {
+  color: var(--accent-color);
+  font-weight: bold;
+}
+
+/* Page layout */
+.app-layout {
+  min-height: 100vh;
+  background: var(--primary-color);
+}
+
+.page-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 24px;
+}
+
+.page-content h1 {
+  color: var(--accent-color);
+  font-size: 32px;
+}
+
+.page-content h2 {
+  color: var(--accent-color);
+}
+
+.page-content > section > p {
+  color: var(--muted-color);
+  line-height: 1.6;
+}
+
+.storage-error {
+  padding: 14px 18px;
+  border: 1px solid #17402A;
+  border-radius: 8px;
+  background: #E8F2EB;
+  color: #17402A;
+}
+
+/* Cards and dashboard statistics */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  margin: 30px 0;
+}
+
+.progress-stats {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.stat-card,
+.content-card {
+  background: var(--secondary-color);
+  border: 1px solid var(--border-color);
+  border-radius: 14px;
+  padding: 24px;
+  box-shadow: 0 4px 14px rgba(23, 64, 42, 0.04);
+}
+
+.stat-card h3 {
+  margin-top: 0;
+  color: var(--muted-color);
+  font-size: 16px;
+}
+
+.stat-number {
+  color: var(--accent-color);
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+.content-card {
+  margin: 24px 0;
+}
+
+.content-card h2:first-child {
+  margin-top: 0;
+}
+
+/* Buttons */
+.primary-button,
+.secondary-button,
+.delete-button {
+  display: inline-block;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 18px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 8px 8px 8px 0;
+}
+
+.primary-button {
+  background: var(--accent-color);
+  color: var(--surface-color);
+}
+
+.primary-button:hover {
+  background: #17402A;
+}
+
+.secondary-button {
+  background: var(--secondary-color);
+  color: var(--text-color);
+}
+
+.secondary-button:hover {
+  background: #E8F2EB;
+}
+
+.delete-button {
+  background: #E8F2EB;
+  color: #17402A;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible {
+  outline: 3px solid #17402A;
+  outline-offset: 3px;
+}
+
+/* Forms */
+.task-form {
+  max-width: 650px;
+}
+
+.task-form label {
+  display: block;
+  margin: 18px 0 8px;
+  color: var(--accent-color);
+  font-weight: bold;
+}
+
+.task-form input,
+.task-form select {
+  display: block;
+  width: 100%;
+  padding: 13px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  background: var(--surface-color);
+  color: var(--text-color);
+  font: inherit;
+}
+
+.task-form input:focus,
+.task-form select:focus {
+  border-color: var(--accent-color);
+  outline: none;
+}
+
+.task-form button {
+  margin-top: 24px;
+}
+
+.form-error {
+  margin: 8px 0 0;
+  color: #17402A;
+  font-size: 14px;
+}
+
+/* Task list */
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.task-details h3 {
+  color: var(--accent-color);
+  margin-top: 0;
+}
+
+.task-details p {
+  color: var(--muted-color);
+  font-size: 14px;
+}
+
+.completed-title {
+  text-decoration: line-through;
+  opacity: 0.65;
+}
+
+.task-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.task-row:last-child {
+  border-bottom: none;
+}
+
+.task-row h3 {
+  margin: 0 0 6px;
+  font-size: 16px;
+}
+
+.task-row p {
+  margin: 4px 0;
+  color: var(--muted-color);
+  font-size: 14px;
+}
+
+.status-done {
+  color: #17402A;
+  font-weight: bold;
+}
+
+.status-pending {
+  color: #17402A;
+  font-weight: bold;
+}
+
+.deadline-date {
+  text-align: right;
+  color: var(--accent-color);
+  white-space: nowrap;
+}
+
+/* Progress bar */
+.progress-track {
+  width: 100%;
+  height: 18px;
+  background: var(--secondary-color);
+  border-radius: 20px;
+  overflow: hidden;
+  margin: 20px 0;
+}
+
+.progress-fill {
+  height: 100%;
+  background: var(--secondary-color);
+  border-radius: 20px;
+  transition: width 0.3s ease;
+}
+
+/* Smaller screens */
+@media (max-width: 800px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+  }
+
+  .nav-links {
+    gap: 14px;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .welcome-card {
+    margin: 40px 16px;
+    padding: 40px 20px;
+  }
+
+  .welcome-card h1 {
+    font-size: 28px;
+  }
+
+  .page-content {
+    padding: 24px 16px;
+  }
+
+  .task-item {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 450px) {
+  .task-row {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .deadline-date {
+    text-align: left;
+  }
+}
